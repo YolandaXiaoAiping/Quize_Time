@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Quize</title>
+		<link href="assets/style/style.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+	</head>
+	<body>
+	<!--Start Page-->
+		<div class="start_page" id="start_div">
+			<img src="assets/image/start.png" alt="start"><br>
+			<button id="start_btn">Start</button>
+		</div>
+	<!--Score Line-->	
+		<div class="score_page" id ="score">
+		<p id="this_score">Score For This Question:<span id="this_span">0</span></p>
+		<P id="total_score">Total score:<span id="score_span">0</span></p>
+		</div>
+	<!--Q1-->
+		<div class="Question_page" id="Q1">
+			<h2>
+				Question 1: The first electronic computer in Canada
+				was housed in the Computer Science Department 
+				at the U of T.  What was its name?
+			</h2>
+			<form id="Q1_form">
+				<div>
+					<input  class="0-0" type="radio" name="first_house" value="a"> HAL 9000<br>
+					<p class="explanation Q1 0-0" style="color:#ff6666">
+						Incorrect: The HAL 9000 is a fictional computer from Arthur C.
+						Clarke's 2001: A Space Odyssey.
+					</p>
+				</div>
+				<div>
+					<input type="radio" class="0-1" name="first_house" value="b"> FERUT<br>
+					<p class="explanation Q1 0-1" style="color:#99cc00">
+						Correct: The machine arrived in Canada on April 30, 1952.
+						Named FERUT (FERranti U of T), it was used to compute 
+						changes in water levels due to the opening of the St. Lawrence Seaway.
+					</p>
+				</div>
+				<div>
+					<input type="radio" class="0-2" name="first_house" value="c"> ILLIAC<br>
+					<p class="explanation Q1 0-2" style="color:#ff6666">
+						Incorrect: The ILLIAC was built at the University of Illinois. It was
+						the first von Neumann architecture computer built and owned by an American
+						university. It was put into service on September 22, 1952.
+					</p>
+				</div>
+				<div>
+					<input type="radio" class="0-3" name="first_house" value="d"> UNIVAC<br>
+					<p class="explanation Q1 0-3" style="color:#ff6666">
+						Incorrect:  The UNIVAC was the first commericial computer produced in the 
+						United States, and was designed by J. Presper Eckert and John Mauchly.
+						The United States Census Department received delivery of the first UNIVAC in May 1952.
+					</p>
+				</div>
+			</form>
+			<button type="button" class="Q1" id="show_exp">Show Explanations</button><br>
+			<button type="button" class="Q1 next_btn" id="Q1_next">Next</button>
+		</div>
+	<!--Q2-->
+		<div class="Question_page" id="Q2">
+			<h2>
+				University of Toronto Professors Kelly Gotlieb and Pat
+				Hume are credited in the Oxford English Dictionary with
+				early published use of more than 10 words used in the
+				vocabulary of computing from their 1958 book, "High-speed
+				Data Processing".  Which two of the following are *not* 
+				words for which they are quoted in the OED?
+			</h2>
+			<form id="Q2_form">
+				<div>
+					<input class="1-0" type="checkbox" name="words" value="loop">loop
+				</div>
+				<div>
+					<input class="1-1" type="checkbox" name="words" value="inline">inline
+				</div>
+				<div>
+					<input class="1-2" type="checkbox" name="words" value="keyboard">keyboard
+				</div>
+				<div>
+					<input class="1-3" type="checkbox" name="words" value="interpreter">interpreter
+				</div>
+				<div>
+					<input class="1-4" type="checkbox" name="words" value="function">function
+				</div>
+				<div>
+					<input class="1-5" type="checkbox" name="words" value="block">block
+				</div>
+				<div>
+					<input class="1-6" type="checkbox" name="words" value="character">character
+				</div>
+				<div>
+					<input class="1-7" type="checkbox" name="words" value="variable">variable
+				</div>
+			</form>
+				<p class="explanation Q2 all" style="color:#99cc00">
+						Yes!  It is hard to believe that words we take for granted in computing were once so new.
+				</p>
+				<p class="explanation Q2 one" style="color:#ff6666">
+					Incorrect: You picked {<span id="correct_word"></span>} correctly, but {<span id="incorrect_word"></span>} is one of the words that Professors Gotlieb and Hume got credit for.
+				</p>
+				<p class="explanation Q2 none" style="color:#ff6666">
+					Incorrect: Both words you chose are words that Professors Gotlieb and Hume were quoted for in the OED.
+				</p>
+				<p class="explanation Q2 less" style="color:#ff6666">
+					Your answer is incomplete.  Please select another word.
+				</p>
+				<p class="explanation Q2 more" style="color:#ff6666">
+					Only two words can be selected. Please try again.
+				</p>
+			<button type="button" class="Q2 submit_btn" id="Q2_submit">Submit</button>
+			<button type="button" class="Q2 next_btn" id="Q2_next">Next</button>
+		</div>
+	<!--Q3-->
+		<div class="Question_page" id="Q3">
+			<h2>
+				Match the CS Professor with his or her claim to fame.
+				First choose a professor from the left block,then select the corresponding selection on the right block.
+			</h2>
+			<div id="P1_div">
+				<ol class="Q3 P1" id="Professor_name">
+					<li class="Q3 P1 a" >Daniel Wigdor</li>
+					<li class="Q3 P1 b" >Stephen Cook</li>
+					<li class="Q3 P1 c" >Geoff Hinton</li>
+					<li class="Q3 P1 d" >Karan Singh</li>
+					<li class="Q3 P1 e" >Diane Horton</li>
+					<li class="Q3 P1 f" >Raquel Urtasun</li>
+					<li class="Q3 P1 g" >David Levin</li>
+					<li class="Q3 P1 h" >Mike Brudno</li>
+				</ol>
+			</div>
+			<div id="P2_div">
+				<ul class="Q3 P2" id="claim">
+					<li class="Q3 P2 a" ><span class="Q3 P2 a first">___</span>Taught a first-year course while an undergraduate student in our department<span class="Q3 P2 a last"></span></li>
+					<li class="Q3 P2 b" ><span class="Q3 P2 b first">___</span>Turing Award winner for work in computational complexity<span class="Q3 P2 b last"></span></li>
+					<li class="Q3 P2 c" ><span class="Q3 P2 c first">___</span>Pioneer in machine learning, now Distinguished Researcher at Google<span class="Q3 P2 c last"></span></li>
+					<li class="Q3 P2 d" ><span class="Q3 P2 d first">___</span>Academy Award for Ryan (software research and development director)<span class="Q3 P2 d last"></span></li>
+					<li class="Q3 P2 e" ><span class="Q3 P2 e first">___</span>Winner of both the President's Teaching Award and OCUFA teaching award<span class="Q3 P2 e last"></span></li>
+					<li class="Q3 P2 f" ><span class="Q3 P2 f first">___</span>Canada Research Chair in Machine Learning and Computer Vision, researching self-driving cars<span class="Q3 P2 f last"></span></li>
+					<li class="Q3 P2 g" ><span class="Q3 P2 g first">___</span>Associate Research Scientist at Disney Research before joining the faculty<span class="Q3 P2 g last"></span></li>
+					<li class="Q3 P2 h" ><span class="Q3 P2 h first">___</span>Scientific Director of the Centre for Computational Medicine at Sick Kids Hospital<span class="Q3 P2 h last"></span></li>
+				</ul>
+			</div>
+			
+			<button class = "Q3 submit_btn" id = "Q3_submit">Submit</button><br>
+			<button class = "Q3 next_btn" id ="Q3_next">Next</button>
+		</div>
+	<!--Q4-->	
+		<div class="Question_page" id="Q4">
+			<h2>Arrange by year of invention from oldest to newest.Drag each inventions to rearrange them from oldest to newest.</h2>
+			<div id="testPlace" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p class="Q4" id="0"><span class="Q4 0" draggable="true" ondragstart="drag(event)">The First Computer Network</span></p>
+				<p class="Q4" id="1"><span class="Q4 1" draggable="true" ondragstart="drag(event)">First Microprocessor: Intel</span></p>
+				<p class="Q4" id="2"><span class="Q4 2" draggable="true" ondragstart="drag(event)">First Popular High-Level Language: FORTRAN</span></p>
+				<p class="Q4" id="3"><span class="Q4 3" draggable="true" ondragstart="drag(event)">First Open Source Software: A-2 System</span></p>
+				<p class="Q4" id="4"><span class="Q4 4" draggable="true" ondragstart="drag(event)">First Compiler for Electronic Computer: A-0 System</span></p>
+				<p class="Q4" id="5"><span class="Q4 5" draggable="true" ondragstart="drag(event)">First Computer Program</span></p>
+				<p class="Q4" id="6"><span class="Q4 6" draggable="true" ondragstart="drag(event)">First Object Oriented Programming Language: Simula</span></p>
+			</div>
+			<span class="Q4 explanation 0">- 1940</span>
+			<span class="Q4 explanation 1">- 1971</span>
+			<span class="Q4 explanation 2">– 1957 (John Backus)</span>
+			<span class="Q4 explanation 3">– 1953</span>
+			<span class="Q4 explanation 4">– 1951 (Grace Hopper)</span>
+			<span class="Q4 explanation 5">– 1841  (Ada Lovelace)</span>
+			<span class="Q4 explanation 6">– 1967 (Ole-Johan Dahl and Kristen Nygaard)</span>
+			<button class="Q4 submit_btn" id="Q4_submit">Submit</button><br>
+			<button class="Q4 next_btn" id="Q4_next">Next</button>
+		</div>
+	<!--End-->
+		<div id="end_page">
+		<img alt="finish" src="assets/image/finish.png">
+		<P id="final_p">Your Final Score:<span id="final_score"></span></p>
+		<button id="again_btn">Play Again</button>
+		</div>
+		<script type="text/javascript" src="assets/javascript/quiz.js"></script>
+	</body>
+</html>
